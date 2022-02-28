@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "appetizers",
+  "collectionName": "foods",
   "info": {
-    "singularName": "appetizer",
-    "pluralName": "appetizers",
-    "displayName": "appetizer",
-    "description": ""
+    "singularName": "food",
+    "pluralName": "foods",
+    "displayName": "Food"
   },
   "options": {
     "draftAndPublish": true
@@ -16,18 +15,23 @@
       "type": "string"
     },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     },
     "prize": {
       "type": "decimal"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "foods"
     }
   }
 }

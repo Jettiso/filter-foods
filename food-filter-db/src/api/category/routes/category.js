@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * appetizer router.
+ * category router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::appetizer.appetizer');
+module.exports = createCoreRouter('api::category.category');
